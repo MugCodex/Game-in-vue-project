@@ -1,13 +1,13 @@
 <template>
   <div id="app">
     <div id="game-wrapper">
-      <!-- Header -->
+    
       <div id="header">
         <h1>Crazy Cup Filler</h1>
         <p class="subtitle">Fill the cup!</p>
       </div>
 
-      <!-- Stats -->
+      
       <div id="stats">
         <div class="stat-box">
           <span class="stat-label">Score</span>
@@ -23,7 +23,7 @@
         </div>
       </div>
 
-      <!-- Game Info -->
+      
       <div id="info">
         <div class="info-item">
           <span>Target: <strong>{{ target }}%</strong> (±{{ tolerance }}%)</span>
@@ -34,7 +34,7 @@
         </div>
       </div>
 
-      <!-- Tube -->
+    
       <div id="tube-container">
         <div id="tube">
           <div id="water" :style="{ height: level + '%' }"></div>
@@ -42,7 +42,7 @@
         </div>
       </div>
 
-      <!-- Controls -->
+      
       <div id="controls">
         <button 
           class="btn btn-start"
@@ -81,7 +81,7 @@
         </button>
       </div>
 
-      <!-- Settings -->
+      
       <div id="settings">
         <h3>Settings</h3>
         
@@ -153,13 +153,13 @@
         </div>
       </div>
 
-      <!-- Message -->
+      
       <div v-if="message" id="message" :class="'msg-' + messageType">
         {{ message }}
       </div>
     </div>
 
-    <!-- Game Over Modal -->
+    
     <div v-if="gameOver" id="modal">
       <div id="modal-box">
         <h2>Game Over!</h2>
@@ -354,7 +354,7 @@ export default {
   width: 100%;
 }
 
-/* Header */
+
 #header {
   text-align: center;
   margin-bottom: 10px;
@@ -374,7 +374,7 @@ export default {
   font-size: 11px;
 }
 
-/* Stats */
+
 #stats {
   display: flex;
   gap: 8px;
@@ -405,7 +405,7 @@ export default {
   font-weight: 700;
 }
 
-/* Info */
+
 #info {
   background: #f8f9fa;
   padding: 6px;
@@ -428,8 +428,6 @@ export default {
   color: #333;
   font-weight: 700;
 }
-
-/* Tube */
 #tube-container {
   text-align: center;
   margin: 10px 0;
@@ -466,7 +464,6 @@ export default {
   box-shadow: 0 0 4px rgba(255, 193, 7, 0.5);
 }
 
-/* Controls */
 #controls {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -528,7 +525,6 @@ export default {
   grid-column: 1 / -1;
 }
 
-/* Settings */
 #settings {
   background: #f8f9fa;
   padding: 10px;
@@ -617,7 +613,7 @@ export default {
   cursor: pointer;
 }
 
-/* Messages */
+
 #message {
   padding: 6px;
   border-radius: 6px;
@@ -650,7 +646,6 @@ export default {
   border: 1px solid #bee5eb;
 }
 
-/* Modal */
 #modal {
   position: fixed;
   top: 0;
